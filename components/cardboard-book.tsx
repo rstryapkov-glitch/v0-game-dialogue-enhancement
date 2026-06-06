@@ -69,7 +69,7 @@ export function CardboardBook() {
 
       {/* ---- Cover title ---- */}
       {isFirst && (
-        <h1 className="animate-pop-in absolute left-1/2 top-[14%] z-20 w-[92%] -translate-x-1/2 text-center font-heading text-5xl leading-[1.05] text-primary drop-shadow-[0_2px_0_rgba(255,255,255,0.6)] sm:text-7xl text-balance">
+        <h1 className="animate-pop-in absolute left-1/2 top-[12%] z-20 w-[94%] -translate-x-1/2 text-center font-heading text-6xl leading-[1.05] text-primary drop-shadow-[0_2px_0_rgba(255,255,255,0.6)] sm:text-8xl text-balance">
           {slide.title}
         </h1>
       )}
@@ -77,26 +77,17 @@ export function CardboardBook() {
       {/* ---- Floating content (bubble + extras) sits above the dialog panel ---- */}
       <div className="absolute inset-x-0 bottom-[12.5rem] z-20 flex flex-col items-start gap-4 px-5 sm:bottom-44 sm:px-10">
         {slide.kicker && (
-          <span className="animate-pop-in inline-flex items-center gap-2 rounded-full border-2 border-border bg-card/90 px-4 py-1.5 font-heading text-xl text-primary shadow-sm backdrop-blur-sm">
+          <span className="animate-pop-in inline-flex items-center gap-2 rounded-full border-2 border-border bg-card/90 px-5 py-2 font-heading text-2xl text-primary shadow-sm backdrop-blur-sm">
             {slide.kicker}
           </span>
         )}
 
         <div className="flex w-full items-end justify-between gap-4">
           <SpeechBubble text={slide.bubble} side={slide.bubbleSide} />
-          {index === 4 && (
-            <div className="hidden shrink-0 sm:block">
-              <DateCard />
-            </div>
-          )}
         </div>
 
-        {/* mobile date card under the bubble */}
-        {index === 4 && (
-          <div className="sm:hidden">
-            <DateCard />
-          </div>
-        )}
+        {/* interactive calendar — she picks the date herself */}
+        {index === 4 && <DateCard />}
       </div>
 
       {/* ---- Bottom dialog panel ---- */}
@@ -111,7 +102,7 @@ export function CardboardBook() {
               backgroundSize: "14px 14px",
             }}
           >
-            <p className="mb-4 text-center font-heading text-2xl text-foreground sm:text-3xl text-pretty">
+            <p className="mb-4 text-center font-heading text-3xl text-foreground sm:text-4xl text-pretty">
               {slide.caption}
             </p>
 

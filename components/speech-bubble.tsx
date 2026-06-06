@@ -23,7 +23,7 @@ export function SpeechBubble({ text, side = "left", className }: SpeechBubblePro
       <div className="absolute inset-0 translate-x-1.5 translate-y-2 rounded-[1.6rem] bg-border/70" />
 
       <div className="relative rounded-[1.6rem] border-[3px] border-border bg-card px-6 py-5 shadow-[0_8px_0_0_rgba(0,0,0,0.06)]">
-        <p className="font-heading text-2xl leading-snug text-primary sm:text-3xl text-pretty">
+        <p className="font-heading text-3xl leading-snug text-primary sm:text-4xl text-pretty">
           {text}
         </p>
         {/* tail */}
